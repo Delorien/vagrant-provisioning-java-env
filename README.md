@@ -9,6 +9,7 @@
  * MySql
  * Tomcat
  * Git
+ * Eclipse
 
 
 The installations are customizable. To prevent any installation just comment the script-call row.
@@ -25,6 +26,15 @@ Example:
 #
 # VARIABLES
 GIT_USER = <input-your-git-email>
+```
+
+* Select host OS for eclipse:
+
+```bash
+#
+# VARIABLES
+HOST = "linux"
+#HOST = "windows"
 ```
 
 ##Virtual machine details

@@ -10,15 +10,15 @@
  * Tomcat
  * Git
 
-
 ##For usage:
-  * Input the email to be used to generate the key in variable:
-  ```bash
-	#
-	# VARIABLES
-	GIT_USER = <input-your-git-email>
-  ```
+* Input the email to be used to generate the key in variable:
 
+```bash
+#
+# VARIABLES
+GIT_USER = <input-your-git-email>
+```
+ 
 ##Virtual machine details
  * Ubuntu64
  * 4GB RAM

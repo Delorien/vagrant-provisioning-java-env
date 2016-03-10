@@ -10,6 +10,14 @@
  * Tomcat
  * Git
 
+
+The installations are customizable. To prevent any installation just comment the script-call row.
+Example:
+```bash
+# Install MySql
+#config.vm.provision "shell", path: ".vagrant-provision/my-sql.sh"
+```
+
 ##For usage:
 * Input the email to be used to generate the key in variable:
 
@@ -18,7 +26,7 @@
 # VARIABLES
 GIT_USER = <input-your-git-email>
 ```
- 
+
 ##Virtual machine details
  * Ubuntu64
  * 4GB RAM

@@ -2,7 +2,7 @@
 # VARIABLES
 VM_IP = "192.168.20.10"
 GIT_USER = <input-your-git-email>
-HOME_DIR = "/home/vagrant"
+DIR_HOME = "/home/vagrant"
 
 # -*- mode: ruby -*-
 # vi: set ft=ruby :
@@ -80,5 +80,24 @@ Vagrant.configure(2) do |config|
   #   sudo apt-get update
   #   sudo apt-get install -y apache2
   # SHELL
-  config.vm.provision "shell", path: ".vagrant-provision/dev-java-env.sh", :args => [GIT_USER, HOME_DIR]
+
+  # Installations###
+  # Comment the line to not to install some tool. ###
+  # These tools are not optional. They are used by the others installations scripts.
+  config.vm.provision "shell", path: ".vagrant-provision/tools.sh"
+  
+  # Install Java
+  config.vm.provision "shell", path: ".vagrant-provision/java.sh"
+  
+  # Install Maven
+  config.vm.provision "shell", path: ".vagrant-provision/maven.sh", :args => [DIR_HOME]
+  
+  # Install MySql
+  config.vm.provision "shell", path: ".vagrant-provision/my-sql.sh"
+  
+  # Install Tomcat
+  config.vm.provision "shell", path: ".vagrant-provision/tomcat.sh", :args => [DIR_HOME]
+  
+  # Install Git
+  config.vm.provision "shell", path: ".vagrant-provision/git.sh", :args => [GIT_USER, DIR_HOME]
 end

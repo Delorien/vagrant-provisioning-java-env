@@ -11,7 +11,7 @@
  * Git
 
 
- The installations are customizable. To prevent any installation just comment the script-call row.
+The installations are customizable. To prevent any installation just comment the script-call row.
 Example:
 ```bash
 # Install MySql

@@ -3,6 +3,8 @@
 VM_IP = "192.168.20.10"
 GIT_USER = <input-your-git-email>
 DIR_HOME = "/home/vagrant"
+HOST = "linux"
+#HOST = "windows"
 
 # -*- mode: ruby -*-
 # vi: set ft=ruby :
@@ -100,4 +102,7 @@ Vagrant.configure(2) do |config|
   
   # Install Git
   config.vm.provision "shell", path: ".vagrant-provision/git.sh", :args => [GIT_USER, DIR_HOME]
+
+  # Install Eclipse
+  config.vm.provision "shell", path: ".vagrant-provision/eclipse.sh", :args => [HOST, DIR_HOME]
 end
